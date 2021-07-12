@@ -1,0 +1,6 @@
+---
+- name: install miniconda
+  hosts: localhost
+  gather_facts: true
+  roles:
+    - miniconda
