@@ -13,4 +13,18 @@
   register: r_result
   failed_when: "r_result.rc != 0 or 'had non-zero exit status' in r_result.stderr"
   changed_when: "'Added' in r_result.stdout"
-  loop: "{{ somelist }}"
+  with_items:
+    - dplyr
+    - data.table
+    - readr
+    - lubridate
+    - tidyr
+    - tidyselect
+    - bit
+    - bit64
+    - plyr
+    - dplyr
+    - data.table
+    - rpart
+    - lfe
+    - ggplot2
